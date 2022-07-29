@@ -5,12 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mounadi05 <mounadi2015@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/27 01:20:34 by mounadi05         #+#    #+#             */
-/*   Updated: 2022/07/27 01:20:35 by mounadi05        ###   ########.fr       */
+/*   Created: 2022/07/29 03:50:47 by mounadi05         #+#    #+#             */
+/*   Updated: 2022/07/29 03:50:51 by mounadi05        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
+
 std::string Contact::GetFirstName(void)
 {
     return FirstName;
