@@ -6,7 +6,7 @@
 /*   By: mounadi05 <mounadi2015@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 06:30:35 by mounadi05         #+#    #+#             */
-/*   Updated: 2022/07/27 06:30:36 by mounadi05        ###   ########.fr       */
+/*   Updated: 2022/07/29 03:42:48 by mounadi05        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ void Zombie::announce( void )
 }
 Zombie::Zombie ()
 {
-    std::cout << "called  default constructor " << std::endl;
+    std::cout << " default constructor called" << std::endl;
 }
 Zombie::~Zombie()
 {
-    std::cout << name << " called  destructor " << std::endl;
+    std::cout << name << " destructor called " << std::endl;
 }
 
 
