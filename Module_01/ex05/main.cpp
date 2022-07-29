@@ -14,7 +14,7 @@
 int main ()
 {
     Harl test;
-    std::cout << "\n-------------------- TEST 2 ---------------------\n" << std::endl;
+    std::cout << "\n-------------------- TEST 1 ---------------------\n" << std::endl;
     test.complain("DEBUG");
     std::cout << "\n-------------------- TEST 2 ---------------------\n" << std::endl;
     test.complain("INFO");
