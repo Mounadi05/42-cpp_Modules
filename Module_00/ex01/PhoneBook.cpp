@@ -6,7 +6,7 @@
 /*   By: mounadi05 <mounadi2015@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 03:50:59 by mounadi05         #+#    #+#             */
-/*   Updated: 2022/07/29 03:51:09 by mounadi05        ###   ########.fr       */
+/*   Updated: 2022/07/31 11:11:27 by mounadi05        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void PhoneBook::Affiche (int index)
 {
-    std::cout << "\t\tFirst Name : " << contacts[index].GetFirstName() << std::endl;
-    std::cout << "\t\tLast Name : " << contacts[index].GetLastName() << std::endl;
-    std::cout << "\t\tnickname : " << contacts[index].GetNickname() << std::endl;
-    std::cout << "\t\tPhone Number : " << contacts[index].GetPhoneNumber() << std::endl;
-    std::cout << "\t\tDarkest Secret : " << contacts[index].GetDarkestSecret() << std::endl;
+    std::cout << "\n\tFirst Name : " << contacts[index].GetFirstName() << std::endl;
+    std::cout << "\tLast Name : " << contacts[index].GetLastName() << std::endl;
+    std::cout << "\tnickname : " << contacts[index].GetNickname() << std::endl;
+    std::cout << "\tPhone Number : " << contacts[index].GetPhoneNumber() << std::endl;
+    std::cout << "\tDarkest Secret : " << contacts[index].GetDarkestSecret() << std::endl;
     
 }
 
@@ -104,7 +104,13 @@ void PhoneBook::SEARCH(int i)
     std::cin >> index;
     if (std::cin.eof())
         exit(0);
-    if (index < i)
+    else if (!std::cin.good())
+    {
+        std::cin.clear();
+        std::cin.ignore();
+        std::cout << "\t * is not integer * " << std::endl;
+    }
+    else if (index < i && index >= 0)
         Affiche(index);
     else
         std::cout << "\t * the index is out of range or wrong * " << std::endl;

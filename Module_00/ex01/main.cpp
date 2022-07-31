@@ -6,7 +6,7 @@
 /*   By: mounadi05 <mounadi2015@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 03:50:37 by mounadi05         #+#    #+#             */
-/*   Updated: 2022/07/29 03:50:40 by mounadi05        ###   ########.fr       */
+/*   Updated: 2022/07/31 10:42:56 by mounadi05        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int main ()
 
     while(1)
     {
-        std::cout << "\n   enter your command : ";
+        std::cout << "\n  enter your command : ";
         std::getline(std::cin,commande);
         if (!commande.empty())
         {
@@ -38,7 +38,10 @@ int main ()
             else if (commande == "EXIT")
                 c.EXIT();
             else if (commande == "SEARCH")
+            {
                 c.SEARCH(check);
+                std::cin.ignore();
+            }
             else
                 std::cout << "\n * Command not found *\n";
         }
