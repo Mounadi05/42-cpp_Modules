@@ -6,7 +6,7 @@
 /*   By: mounadi05 <mounadi2015@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 11:42:02 by mounadi05         #+#    #+#             */
-/*   Updated: 2022/08/02 22:50:25 by mounadi05        ###   ########.fr       */
+/*   Updated: 2022/08/07 22:29:56 by mounadi05        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ Fixed::Fixed()
 }
 Fixed::Fixed(const int raw)
 {
-    this->raw = (raw << nfb);
+    this->raw = raw * (1 << nfb);
     std::cout << "int constructor called" << std::endl;
 }
 Fixed::Fixed(const float raw)
 {
-    this->raw = std::roundf(raw * (1 << nfb));
+    this->raw = float(std::roundf(raw * (1 << nfb)));
     std::cout << "float  constructor called" << std::endl;
 }
 Fixed::Fixed(const Fixed& point)
@@ -39,16 +39,16 @@ Fixed::~Fixed()
 Fixed& Fixed::operator= (const Fixed& Fixed)
 {
     std::cout << "Copy assignment operator called" << std::endl;
-    this->raw = Fixed.getRawBits();
+    this->raw = Fixed.raw;
     return *this;
 }
 float Fixed::toFloat( void ) const
 {
-    return float(getRawBits() / (1 << nfb));
+    return float(float(raw) / (1 << nfb));
 }
 int Fixed::toInt( void ) const
 {
-    return (getRawBits() >> 8);   
+    return ((raw) >> 8);   
 }
 std::ostream& operator << (std::ostream& os ,const Fixed& Fixed)
 {
