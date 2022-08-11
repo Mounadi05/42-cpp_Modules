@@ -6,13 +6,13 @@
 /*   By: mounadi05 <mounadi2015@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 20:57:48 by mounadi05         #+#    #+#             */
-/*   Updated: 2022/08/10 06:33:44 by mounadi05        ###   ########.fr       */
+/*   Updated: 2022/08/11 06:07:45 by mounadi05        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap()
+ClapTrap::ClapTrap():hp(10),ep(10),ad(0)
 {
     std::cout << "ClapTrap default constructors called" << std::endl;
 }
@@ -54,6 +54,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 }
 void ClapTrap::beRepaired(unsigned int amount)
 {
-    ep += amount;
+    hp += amount;
+    ep--;
     std::cout << "ClapTrap be Repaired" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: mounadi05 <mounadi2015@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 20:58:03 by mounadi05         #+#    #+#             */
-/*   Updated: 2022/08/10 05:49:16 by mounadi05        ###   ########.fr       */
+/*   Updated: 2022/08/11 06:07:22 by mounadi05        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ public :
     FragTrap& operator= (const FragTrap &st);
     void highFivesGuys(void);
     void attack(const std::string& target);
-    void takeDamage(unsigned int amount);
-    void beRepaired(unsigned int amount);
+     
     ~FragTrap();
 private :
     std::string name;   

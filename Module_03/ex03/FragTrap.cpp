@@ -6,16 +6,19 @@
 /*   By: mounadi05 <mounadi2015@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 20:58:00 by mounadi05         #+#    #+#             */
-/*   Updated: 2022/08/10 06:33:27 by mounadi05        ###   ########.fr       */
+/*   Updated: 2022/08/11 06:07:17 by mounadi05        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
  
 FragTrap::FragTrap()
-{ 
+{
+    hp = 100;
+    ad = 30;
     std::cout << "FragTrap default constructor called " << std::endl;
 }
+
 FragTrap::FragTrap(std::string name)
 {
     this->name = name;
@@ -56,13 +59,4 @@ void FragTrap::attack(const std::string& target)
         std::cout << "FragTrap " << name << " attacks " << target << " causing " << ad << " points of damage " << std::endl;
     }
 }
-void FragTrap::takeDamage(unsigned int amount)
-{
-    hp -= amount;
-    std::cout << "FragTrap took " << amount <<  " Damage " << std::endl;
-}
-void FragTrap::beRepaired(unsigned int amount)
-{
-    ep += amount;
-    std::cout << "FragTrap be Repaired" << std::endl;
-}
+ 

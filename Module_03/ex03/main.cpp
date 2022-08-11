@@ -6,7 +6,7 @@
 /*   By: mounadi05 <mounadi2015@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 20:58:07 by mounadi05         #+#    #+#             */
-/*   Updated: 2022/08/10 05:40:45 by mounadi05        ###   ########.fr       */
+/*   Updated: 2022/08/11 01:03:11 by mounadi05        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ int main ()
 {
     DiamondTrap p("anass");
     p.attack("enemy");
-    p.ClapTrap::attack("enemy1");
+    p.whoAmI();
 }
