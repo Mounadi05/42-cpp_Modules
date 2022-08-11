@@ -6,7 +6,7 @@
 /*   By: mounadi05 <mounadi2015@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 20:57:28 by mounadi05         #+#    #+#             */
-/*   Updated: 2022/08/10 05:29:54 by mounadi05        ###   ########.fr       */
+/*   Updated: 2022/08/11 03:53:34 by mounadi05        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,13 +51,4 @@ void ScavTrap::attack(const std::string& target)
         std::cout << "ScavTrap " << name << " attacks " << target << " causing " << ad << " points of damage " << std::endl;
     }
 }
-void ScavTrap::takeDamage(unsigned int amount)
-{
-    hp -= amount;
-    std::cout << "ScavTrap took " << amount <<  " Damage " << std::endl;
-}
-void ScavTrap::beRepaired(unsigned int amount)
-{
-    ep += amount;
-    std::cout << "ScavTrap be Repaired" << std::endl;
-}
+

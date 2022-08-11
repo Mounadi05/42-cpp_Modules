@@ -6,7 +6,7 @@
 /*   By: mounadi05 <mounadi2015@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 20:57:48 by mounadi05         #+#    #+#             */
-/*   Updated: 2022/08/09 20:57:49 by mounadi05        ###   ########.fr       */
+/*   Updated: 2022/08/11 03:54:21 by mounadi05        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 }
 void ClapTrap::beRepaired(unsigned int amount)
 {
-    ep += amount;
+    hp += amount;
+    ep--;
     std::cout << "ClapTrap be Repaired" << std::endl;
 }

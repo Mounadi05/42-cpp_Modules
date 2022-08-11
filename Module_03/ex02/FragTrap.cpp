@@ -6,7 +6,7 @@
 /*   By: mounadi05 <mounadi2015@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 20:58:00 by mounadi05         #+#    #+#             */
-/*   Updated: 2022/08/10 05:30:11 by mounadi05        ###   ########.fr       */
+/*   Updated: 2022/08/11 03:54:12 by mounadi05        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,4 @@ void FragTrap::attack(const std::string& target)
         ep--;
         std::cout << "FragTrap " << name << " attacks " << target << " causing " << ad << " points of damage " << std::endl;
     }
-}
-void FragTrap::takeDamage(unsigned int amount)
-{
-    hp -= amount;
-    std::cout << "FragTrap took " << amount <<  " Damage " << std::endl;
-}
-void FragTrap::beRepaired(unsigned int amount)
-{
-    ep += amount;
-    std::cout << "FragTrap be Repaired" << std::endl;
 }
