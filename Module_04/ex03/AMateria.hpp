@@ -6,14 +6,16 @@
 /*   By: mounadi05 <mounadi2015@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 16:38:26 by mounadi05         #+#    #+#             */
-/*   Updated: 2022/08/13 23:22:25 by mounadi05        ###   ########.fr       */
+/*   Updated: 2022/08/14 03:14:24 by mounadi05        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #ifndef AMATERIA_HPP_
 #define AMATERIA_HPP_
 
-#include "ICharacter.hpp"
+class ICharacter;
 #include <iostream>
 class AMateria
 {

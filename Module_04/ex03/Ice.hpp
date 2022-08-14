@@ -6,7 +6,7 @@
 /*   By: mounadi05 <mounadi2015@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 16:38:19 by mounadi05         #+#    #+#             */
-/*   Updated: 2022/08/13 18:02:28 by mounadi05        ###   ########.fr       */
+/*   Updated: 2022/08/14 05:02:28 by mounadi05        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 #define ICE_HPP_
 
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
 class Ice : public AMateria
 {
     public :
         Ice();
-        Ice(std::string const & type);
         Ice(const Ice &A);
         Ice & operator = (const Ice &A);
         ~Ice();

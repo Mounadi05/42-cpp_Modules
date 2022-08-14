@@ -6,7 +6,7 @@
 /*   By: mounadi05 <mounadi2015@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 23:16:42 by mounadi05         #+#    #+#             */
-/*   Updated: 2022/08/14 00:29:52 by mounadi05        ###   ########.fr       */
+/*   Updated: 2022/08/14 04:50:41 by mounadi05        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,17 @@ Character::Character(const Character &C)
 }
 Character & Character::operator=(const Character &C)
 {
-    delete[]this->slot;
+    for(int i = 0 ; i < 4 && slot[i] ; i++)
+        delete slot[i];
     this->name = C.name;
-    for(int i; i < 4; i++)
+    for(int i = 0; i < 4; i++)
         this->slot[i] = C.slot[i];
+    return *this;
 }
 Character::~Character()
 {
-    delete[]this->slot;
+    for(int i = 0 ; i< 4 && slot[i] ; i++)
+        delete slot[i];
 }
 
 std::string const & Character::getName() const
@@ -41,10 +44,12 @@ std::string const & Character::getName() const
 
 void Character::equip(AMateria* m)
 {
+
     int i = 0;
     while(i < 4 && slot[i] && ++i);
     if (i < 4 && !slot[i])
-        slot[i] = m->clone();
+        slot[i] = m;
+
 }
 void Character::unequip(int idx)
 {

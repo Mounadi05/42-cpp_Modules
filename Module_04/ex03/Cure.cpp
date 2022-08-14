@@ -6,7 +6,7 @@
 /*   By: mounadi05 <mounadi2015@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 00:24:06 by mounadi05         #+#    #+#             */
-/*   Updated: 2022/08/14 00:24:07 by mounadi05        ###   ########.fr       */
+/*   Updated: 2022/08/14 05:02:13 by mounadi05        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,7 @@
 
 Cure::Cure()
 {
-    
-}
-Cure::Cure(std::string const & type) : AMateria(type)
-{
-    
+    type = "cure";
 }
 Cure::Cure(const Cure &A)
 {
@@ -42,7 +38,7 @@ AMateria* Cure::clone() const
     AMateria *P = new Cure();
     return P;
 }
-void use(ICharacter& target)
+void Cure::use(ICharacter& target)
 {
     std::cout << "* heals " <<  target.getName() <<"’s wounds *"<<std::endl;
 }

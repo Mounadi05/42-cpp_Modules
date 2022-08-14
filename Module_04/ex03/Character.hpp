@@ -6,7 +6,7 @@
 /*   By: mounadi05 <mounadi2015@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 23:07:22 by mounadi05         #+#    #+#             */
-/*   Updated: 2022/08/13 23:33:02 by mounadi05        ###   ########.fr       */
+/*   Updated: 2022/08/14 03:14:57 by mounadi05        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define CHARACTER_HPP_
 
 #include "ICharacter.hpp"
+#include "AMateria.hpp"
+
 class Character : public ICharacter
 {
     private :
